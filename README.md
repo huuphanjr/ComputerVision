@@ -1,5 +1,6 @@
 # YOLOv5s-based Self-Checkout Fruit Detection System
 
+# GUI demonstration
 ![image](https://github.com/huuphanjr/ComputerVision/assets/130680698/f687f726-94d9-4d9d-9073-2d06a5b5f688)
 
 ![image](https://github.com/huuphanjr/ComputerVision/assets/130680698/95ed3224-b9b9-4b30-9690-82c245208458)
