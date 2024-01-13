@@ -1,4 +1,4 @@
-# YOLOv5-based Self-Checkout Fruit Detection System
+# YOLOv5s-based Self-Checkout Fruit Detection System
 
 
 # Installation guide
