@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 # COCO128 dataset https://www.kaggle.com/ultralytics/coco128
 # Download command: bash data/scripts/get_coco128.sh
 # Train command: python train.py --data coco128.yaml

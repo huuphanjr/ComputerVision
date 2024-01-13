@@ -71,13 +71,30 @@ class show(QThread):
 
 class MainWindow(QWidget):
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(MainWindow , self).__init__()
+
+        # Tạo một đối tượng QUiLoader
         loader = QUiLoader()
-        self.ui = loader.load("ui/form.ui")
-        
+
+        # Đường dẫn đến file form.ui (điều chỉnh đường dẫn theo cấu trúc thư mục của bạn)
+        ui_file_path = "ui/form.ui"
+
+        # Kiểm tra xem file tồn tại hay không
+        if not QFile.exists(ui_file_path):
+            print(f"File not found: {ui_file_path}")
+            sys.exit(1)
+
+        # Sử dụng QUiLoader để tải UI từ tệp tin
+        ui_file = QFile(ui_file_path)
+        ui_file.open(QFile.ReadOnly | QFile.Text)
+        self.ui = loader.load(ui_file)
+        ui_file.close()
+
+        # Kết nối các sự kiện và thêm logic xử lý tại đây
         self.ui.btn_browse.clicked.connect(self.getFile)
         self.ui.btn_start.clicked.connect(self.predict)
 
+        # Hiển thị cửa sổ
         self.ui.show()
 
     def getFile(self):
